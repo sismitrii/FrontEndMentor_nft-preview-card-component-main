@@ -20,16 +20,55 @@ body {
     padding: 25px;
     border-radius: 20px;
     background-color: hsl(216, 50%, 16%);
+
 }
 
 .equilibrium {
     border-radius: 10px;
 }
 
+.text-center {
+    position: relative;
+}
+
+.blueFilter {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0;
+}
+
+.eyes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.blueFilter:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.blueFilter:hover + .eyes{
+    opacity: 100%;
+}
+
 .description h3{
     margin: 30px 0 20px;
     font-weight: 700;
     font-size: 22px;
+    color: white;
+}
+
+.description h3:hover, .author p span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 .description p {
@@ -53,7 +92,6 @@ body {
 .price p:first-child{
     color: hsl(178, 100%, 50%);
     font-weight: 700;
-
 }
 
 .line {
